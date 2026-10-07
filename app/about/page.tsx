@@ -67,7 +67,7 @@ export default function AboutPage() {
       <section className="sec paper flush-t">
         <div className="head">
           <span className="eyebrow">The hands</span>
-          <h2 style={{ marginTop: 12 }}>Founders, and<br /><em>still on the floor.</em></h2>
+          <h2>Founders, and<br /><em>still on the floor.</em></h2>
         </div>
         <div className="hands">
           {STYLISTS.map((s) => (
@@ -81,7 +81,7 @@ export default function AboutPage() {
       </section>
 
       {/* the room */}
-      <section className="band rev">
+      <section className="band flip">
         <Reveal className="band-img" mode="wipe">
           <Image
             src="/img/room-mirrors.jpg"

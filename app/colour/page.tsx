@@ -21,7 +21,7 @@ export default function ColourPage() {
       <section className="sec flush-b">
         <div className="head">
           <span className="eyebrow">Colour</span>
-          <h2 style={{ marginTop: 12 }}>The work we are<br /><em>known for.</em></h2>
+          <h2>The work we are<br /><em>known for.</em></h2>
         </div>
         <p className="lede">
           Global colour and root touch-ups, balayage, and the creative work that fills our feed: burgundy

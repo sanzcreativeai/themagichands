@@ -101,7 +101,7 @@ export default function Home() {
         <div className="head head-row">
           <div>
             <span className="eyebrow">What we do</span>
-            <h2 style={{ marginTop: 12 }}>The <em>index.</em></h2>
+            <h2>The <em>index.</em></h2>
           </div>
           <Link className="link-u" href="/services">All services &rarr;</Link>
         </div>
@@ -130,7 +130,7 @@ export default function Home() {
         <div className="head head-row">
           <div>
             <span className="eyebrow">Colour</span>
-            <h2 style={{ marginTop: 12 }}>The work we are<br /><em>known for.</em></h2>
+            <h2>The work we are<br /><em>known for.</em></h2>
           </div>
           <Link className="link-u" href="/colour">The colour book &rarr;</Link>
         </div>
@@ -141,7 +141,7 @@ export default function Home() {
       <section className="sec paper">
         <div className="head">
           <span className="eyebrow">The hands</span>
-          <h2 style={{ marginTop: 12 }}>People ask for them<br /><em>by name.</em></h2>
+          <h2>People ask for them<br /><em>by name.</em></h2>
         </div>
         <div className="hands">
           {STYLISTS.map((s) => (
@@ -158,7 +158,7 @@ export default function Home() {
       <section className="sec">
         <div className="head">
           <span className="eyebrow">Men&rsquo;s grooming</span>
-          <h2 style={{ marginTop: 12 }}>Fades, beards,<br /><em>and a sharp line.</em></h2>
+          <h2>Fades, beards,<br /><em>and a sharp line.</em></h2>
         </div>
         <div className="grid-tiles">
           {GROOMING.map((g) => (
@@ -174,7 +174,7 @@ export default function Home() {
       <section className="sec ink-2">
         <div className="head">
           <span className="eyebrow">In the chair</span>
-          <h2 style={{ marginTop: 12 }}>Shot on the floor,<br /><em>not in a studio.</em></h2>
+          <h2>Shot on the floor,<br /><em>not in a studio.</em></h2>
         </div>
         <div className="grid-reels">
           {REELS.map((r) => (
@@ -189,7 +189,7 @@ export default function Home() {
       <ScissorsRule />
 
       {/* ---------------- academy teaser ---------------- */}
-      <section className="band rev">
+      <section className="band flip">
         <Reveal className="band-img" mode="wipe">
           <Image
             src="/img/product-3tenx.jpg"

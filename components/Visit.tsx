@@ -22,7 +22,7 @@ export default function Visit() {
       <div>
         <h3>Call or message</h3>
         <a className="big" href={`tel:${SALON.phoneHref}`}>{SALON.phoneDisplay}</a>
-        <p style={{ marginTop: 12 }}>
+        <p>
           Walk-ins welcome. For colour, texture and bridal, book ahead.
         </p>
       </div>

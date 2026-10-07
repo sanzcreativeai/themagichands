@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <section className="sec flush-b">
         <div className="head">
           <span className="eyebrow">Services</span>
-          <h2 style={{ marginTop: 12 }}>Everything we do,<br /><em>and what it involves.</em></h2>
+          <h2>Everything we do,<br /><em>and what it involves.</em></h2>
         </div>
         <p className="lede">
           Pricing varies by hair length and condition, so we quote before you come in rather than printing a
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       <section className="sec paper">
         <div className="head">
           <span className="eyebrow">Men&rsquo;s grooming</span>
-          <h2 style={{ marginTop: 12 }}>Fades, beards,<br /><em>and a sharp line.</em></h2>
+          <h2>Fades, beards,<br /><em>and a sharp line.</em></h2>
         </div>
         <div className="grid-tiles">
           {GROOMING.map((g) => (

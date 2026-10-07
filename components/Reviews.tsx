@@ -6,7 +6,7 @@ export default function Reviews() {
       <div className="head head-row">
         <div>
           <span className="eyebrow">{SALON.reviewCount}+ reviews on Google</span>
-          <h2 style={{ marginTop: 12 }}>In their <em>words.</em></h2>
+          <h2>In their <em>words.</em></h2>
         </div>
         <a className="link-u" href={SALON.googleReviews} target="_blank" rel="noopener noreferrer">
           Read all on Google &rarr;
