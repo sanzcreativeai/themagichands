@@ -20,8 +20,8 @@
   --mute: #a1968a;
   --mute-dk: #6b6058;
 
-  --fs-display: var(--font-jost), "Futura", "Century Gothic", sans-serif;
-  --fs-serif: var(--font-cormorant), "Didot", Georgia, serif;
+  --fs-display: "Jost", "Futura", "Century Gothic", sans-serif;
+  --fs-serif: "Cormorant Garamond", "Didot", Georgia, serif;
 
   --gutter: clamp(16px, 3.6vw, 52px);
   --band: clamp(44px, 5.4vw, 86px);

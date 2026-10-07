@@ -1,5 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Jost, Cormorant_Garamond } from "next/font/google";
+
+/* Fonts are self-hosted from npm rather than fetched from Google at build
+   time. next/font/google needs fonts.gstatic.com to be reachable during the
+   build; when it is not — a firewalled runner, or a flaky moment on the CI
+   box — the build still succeeds but silently ships system fallbacks. These
+   packages ship the woff2 files, so the build has no network dependency and
+   the typography cannot quietly go wrong. */
+import "@fontsource/jost/300.css";
+import "@fontsource/jost/400.css";
+import "@fontsource/jost/500.css";
+import "@fontsource/jost/600.css";
+import "@fontsource/cormorant-garamond/400.css";
+import "@fontsource/cormorant-garamond/400-italic.css";
+import "@fontsource/cormorant-garamond/500.css";
+import "@fontsource/cormorant-garamond/500-italic.css";
+
 import "./globals.css";
 
 import Nav from "@/components/Nav";
@@ -9,21 +24,6 @@ import BookingBot from "@/components/BookingBot";
 import JsonLd from "@/components/JsonLd";
 import { EdgeRail, MobileBar } from "@/components/Contact";
 import { SALON, SITE_URL } from "@/lib/data";
-
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-jost",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["italic", "normal"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -72,7 +72,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${jost.variable} ${cormorant.variable}`}>
+    <html lang="en-IN">
       <body>
         <Cursor />
         <Nav />

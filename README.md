@@ -10,10 +10,20 @@ npm run dev      # http://localhost:3000
 npm run build    # production build
 ```
 
-> The sandbox this was built in blocks Google Fonts, so `next/font` could not
-> fetch Jost and Cormorant Garamond there. It works normally on any machine
-> with internet and on Vercel. Everything else compiles clean — all pages
-> prerender as static.
+## Fonts
+
+Jost and Cormorant Garamond are **self-hosted from npm** (`@fontsource/*`),
+not fetched from Google at build time.
+
+This matters. `next/font/google` downloads the woff2 files during the build,
+and when `fonts.gstatic.com` is unreachable — a firewalled runner, or just a
+bad moment on the CI box — the build still *succeeds* and silently ships
+system fallbacks. The site then looks subtly wrong and nothing tells you.
+The first Vercel deploy of this project hit exactly that. Self-hosting
+removes the network dependency, so the typography cannot quietly go wrong.
+
+If you ever change a font, add the matching `@fontsource` package and import
+its weight files in `app/layout.tsx` — don't reach for `next/font/google`.
 
 ## Deploy
 
